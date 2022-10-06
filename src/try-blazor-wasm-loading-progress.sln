@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "blazorwasm-loading-progress", "blazorwasm-loading-progress\blazorwasm-loading-progress.csproj", "{2942FC17-88E7-4A67-9AC5-D8014D998D04}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "blazorwasm-loading-progress-singleOrg", "blazorwasm-loading-progress-singleOrg\blazorwasm-loading-progress-singleOrg.csproj", "{A23A95A2-CF78-40F0-A81F-E3CB0E804B86}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{2942FC17-88E7-4A67-9AC5-D8014D998D04}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2942FC17-88E7-4A67-9AC5-D8014D998D04}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2942FC17-88E7-4A67-9AC5-D8014D998D04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A23A95A2-CF78-40F0-A81F-E3CB0E804B86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A23A95A2-CF78-40F0-A81F-E3CB0E804B86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A23A95A2-CF78-40F0-A81F-E3CB0E804B86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A23A95A2-CF78-40F0-A81F-E3CB0E804B86}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
