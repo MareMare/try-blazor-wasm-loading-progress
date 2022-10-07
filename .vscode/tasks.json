@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/src/blazorwasm-loading-progress/blazorwasm-loading-progress.csproj",
+                "${workspaceFolder}/src/blazorwasm-loading-progress-singleOrg/blazorwasm-loading-progress-singleOrg.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/src/blazorwasm-loading-progress/blazorwasm-loading-progress.csproj",
+                "${workspaceFolder}/src/blazorwasm-loading-progress-singleOrg/blazorwasm-loading-progress-singleOrg.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -33,7 +33,7 @@
                 "watch",
                 "run",
                 "--project",
-                "${workspaceFolder}/src/blazorwasm-loading-progress/blazorwasm-loading-progress.csproj"
+                "${workspaceFolder}/src/blazorwasm-loading-progress-singleOrg/blazorwasm-loading-progress-singleOrg.csproj"
             ],
             "problemMatcher": "$msCompile"
         }

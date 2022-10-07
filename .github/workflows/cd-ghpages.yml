@@ -1,4 +1,4 @@
-name: .NET Build & UnitTests
+name: Deploy to GitHub Pages
 
 on:
   workflow_dispatch:
@@ -8,17 +8,19 @@ on:
     paths:
     - "src/**"
   pull_request:
+    branches:
+    - main
     paths:
     - "src/**"
   
 env:
   CONFIGURATION: Release
   DOTNET_CORE_VERSION: 6.0.x
-  WORKING_DIRECTORY: src
+  WORKING_DIRECTORY: src/blazorwasm-loading-progress-singleOrg
   # TESTING_DIRECTORY: src
 
 jobs:
-  build-and-test:
+  deploy:
     runs-on: ubuntu-latest
     steps:
     - name: 🛒 Checkout
@@ -31,5 +33,11 @@ jobs:
       run: dotnet restore "${{ env.WORKING_DIRECTORY }}"
     - name: 🛠️ Build
       run: dotnet build "${{ env.WORKING_DIRECTORY }}" --configuration ${{ env.CONFIGURATION }} --no-restore
-    # - name: 🧪 Test
-    #   run: dotnet test "${{ env.TESTING_DIRECTORY }}" --configuration ${{ env.CONFIGURATION }} --no-build --verbosity normal --filter Category!=local
+    - name: 📦 Publish
+      run: dotnet publish "${{ env.WORKING_DIRECTORY }}" --configuration ${{ env.CONFIGURATION }} --no-build -p:GHPages=true -p:GHPagesBase="/try-blazor-wasm-loading-progress/" --output publish
+    - name: 🚀 Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: publish/wwwroot
+        force_orphan: true
