@@ -18,7 +18,7 @@ env:
   DOTNET_CORE_VERSION: 6.0.x
   WORKING_DIRECTORY: src/blazorwasm-loading-progress
   # TESTING_DIRECTORY: src
-  GHPAGES_BASE: "/try-blazor-wasm-loading/"
+  GHPAGES_BASE: "/try-blazor-wasm-loading-progress/"
 
 jobs:
   deploy:
